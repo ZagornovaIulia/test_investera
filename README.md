@@ -3,9 +3,20 @@
 ### Запуск проекта
 
 ```
+cp .env.example .env
 docker-compose up --build
+```
+
+### Применение миграций
+
+```
 docker-compose exec backend python manage.py makemigrations
 docker-compose exec backend python manage.py migrate
+```
+
+### Создание админа
+
+```
 docker-compose exec backend python manage.py createsuperuser
 ```
 
